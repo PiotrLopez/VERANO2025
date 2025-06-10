@@ -9,14 +9,9 @@ CORPUS_DIR = os.path.join(BASE_DIR, "Corpus_clean")
 
 # Lista de ciudades (puedes obtenerlas dinámicamente si lo prefieres)
 CIUDADES = [
-    "CDMX", 
-    "MONTERREY",
     "CANCUN",
-    "GUADALAJARA",
     "ACAPULCO",
-    "MERIDA",
-    "MAZATLAN",
-    "PUEBLA",
+    
     # Agrega todas tus ciudades aquí
 ]
 
