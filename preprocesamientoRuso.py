@@ -79,8 +79,8 @@ def remove_repeated_ngrams(text, max_ngram_size=5):
             text = new_text
     return text
 
-global_path = r'C:\Users\piotr\Desktop\VERANO2025\Descripciones'
-coleccion = 'MAZATLAN_desc.csv'
+global_path = r'C:\Users\pumgu\VERANO2025\Descripciones'
+coleccion = 'ACAPULCO_desc.csv'
 file_path = f'{global_path}/{coleccion}'
 text_df = pd.read_csv(file_path)
 raw_texts = text_df['prompt'].tolist()
@@ -88,6 +88,6 @@ raw_texts = text_df['prompt'].tolist()
 processed_texts, vocabulario = preprocess(raw_texts, bigramas=0, max_doc_freq=0.05)
 processed_texts = [remove_repeated_ngrams(text) for text in processed_texts]
 text_df['prompt'] = processed_texts
-save_path = 'MAZATLAN_desc_preprocesado.csv'
+save_path = r'C:\Users\pumgu\VERANO2025\Corpus_clean\ACAPULCO_clean.csv'
 text_df.to_csv(save_path, sep=',', index=False, quoting=csv.QUOTE_NONE, escapechar='\\')
 print("Archivo guardado en:", save_path)
