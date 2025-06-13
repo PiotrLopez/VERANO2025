@@ -1,0 +1,26 @@
+archivo,filas_totales,palabras_corpus_prompts,palabras_corpus_descripciones,top_ngrams_solicitados,ngrams_utilizados,jaccard_distance,jaccard_similarity,cosine_similarity,coverage_prompts,coverage_descripciones,ngrams_comunes,ngrams_unicos_prompts,ngrams_unicos_descripciones,top_10_ngrams
+CHETUMAL_clean.csv,371,12256,13569,10,10,0.1,0.9,0.948683,1.0,0.9,9,1000,1000,sol | antiguas | templo | cielo | isla | colores | muelle | paraiso | lago | laguna
+CHETUMAL_clean.csv,371,12256,13569,20,20,0.25,0.75,0.857493,0.9,0.85,15,1000,1000,sol | antiguas | templo | cielo | isla | colores | muelle | paraiso | lago | laguna
+CHETUMAL_clean.csv,371,12256,13569,30,30,0.3,0.7,0.823688,0.8333,0.8667,21,1000,1000,sol | antiguas | templo | cielo | isla | colores | muelle | paraiso | lago | laguna
+CHETUMAL_clean.csv,371,12256,13569,40,40,0.35,0.65,0.788241,0.8,0.85,26,1000,1000,sol | antiguas | templo | cielo | isla | colores | muelle | paraiso | lago | laguna
+CHETUMAL_clean.csv,371,12256,13569,50,50,0.34,0.66,0.795701,0.8,0.86,33,1000,1000,sol | antiguas | templo | cielo | isla | colores | muelle | paraiso | lago | laguna
+CHICHENITZA_clean.csv,443,7168,11637,10,10,0.5,0.5,0.680414,0.6,0.9,5,1000,1000,columnas | lk | maravilla | ella | antiguo | templo | cultura | sobre | pyramids | dios
+CHICHENITZA_clean.csv,443,7168,11637,20,20,0.55,0.45,0.639602,0.55,0.9,9,1000,1000,columnas | lk | maravilla | ella | antiguo | templo | cultura | sobre | pyramids | dios
+CHICHENITZA_clean.csv,443,7168,11637,30,30,0.533333,0.466667,0.63901,0.6667,0.8,14,1000,1000,columnas | lk | maravilla | ella | antiguo | templo | cultura | sobre | pyramids | dios
+CHICHENITZA_clean.csv,443,7168,11637,40,40,0.55,0.45,0.621059,0.7,0.75,18,1000,1000,columnas | lk | maravilla | ella | antiguo | templo | cultura | sobre | pyramids | dios
+CHICHENITZA_clean.csv,443,7168,11637,50,50,0.56,0.44,0.613244,0.66,0.78,22,1000,1000,columnas | lk | maravilla | ella | antiguo | templo | cultura | sobre | pyramids | dios
+COZUMEL_clean.csv,418,13363,14757,10,10,0.1,0.9,0.948683,1.0,0.9,9,1000,1000,sol | cielo | arena | colores | ruinas | turquesa | color | comida | coral | palmeras
+COZUMEL_clean.csv,418,13363,14757,20,20,0.05,0.95,0.974679,1.0,0.95,19,1000,1000,sol | cielo | arena | colores | ruinas | turquesa | color | comida | coral | palmeras
+COZUMEL_clean.csv,418,13363,14757,30,30,0.066667,0.933333,0.966092,1.0,0.9333,28,1000,1000,sol | cielo | arena | colores | ruinas | turquesa | color | comida | coral | palmeras
+COZUMEL_clean.csv,418,13363,14757,40,40,0.15,0.85,0.918919,0.925,0.925,34,1000,1000,sol | cielo | arena | colores | ruinas | turquesa | color | comida | coral | palmeras
+COZUMEL_clean.csv,418,13363,14757,50,50,0.18,0.82,0.901153,0.9,0.92,41,1000,1000,sol | cielo | arena | colores | ruinas | turquesa | color | comida | coral | palmeras
+ISLAMUJERES_clean.csv,395,11783,12733,10,10,0.1,0.9,0.948683,1.0,0.9,9,1000,1000,submarino | beach | atardecer | blanca | cuerpo | piscina | coral | mirando | comida | centro
+ISLAMUJERES_clean.csv,395,11783,12733,20,20,0.1,0.9,0.948683,1.0,0.9,18,1000,1000,submarino | beach | atardecer | blanca | cuerpo | piscina | coral | mirando | comida | centro
+ISLAMUJERES_clean.csv,395,11783,12733,30,30,0.233333,0.766667,0.868079,0.9,0.8667,23,1000,1000,submarino | beach | atardecer | blanca | cuerpo | piscina | coral | mirando | comida | centro
+ISLAMUJERES_clean.csv,395,11783,12733,40,40,0.225,0.775,0.873326,0.875,0.9,31,1000,1000,submarino | beach | atardecer | blanca | cuerpo | piscina | coral | mirando | comida | centro
+ISLAMUJERES_clean.csv,395,11783,12733,50,50,0.22,0.78,0.87646,0.9,0.88,39,1000,1000,submarino | beach | atardecer | blanca | cuerpo | piscina | coral | mirando | comida | centro
+UXMAL_clean.csv,75,1890,1931,10,10,0.8,0.2,0.353553,0.8,0.4,2,1000,1000,imagen | cielo | pelicula | pyramid | enano | proyeccion | alrededor | gobernador | aztec | todavia
+UXMAL_clean.csv,75,1890,1931,20,20,0.75,0.25,0.416667,0.8,0.45,5,1000,1000,imagen | cielo | pelicula | pyramid | enano | proyeccion | alrededor | gobernador | aztec | todavia
+UXMAL_clean.csv,75,1890,1931,30,30,0.733333,0.266667,0.452911,0.8667,0.4,8,1000,1000,imagen | cielo | pelicula | pyramid | enano | proyeccion | alrededor | gobernador | aztec | todavia
+UXMAL_clean.csv,75,1890,1931,40,40,0.675,0.325,0.517932,0.875,0.45,13,1000,1000,imagen | cielo | pelicula | pyramid | enano | proyeccion | alrededor | gobernador | aztec | todavia
+UXMAL_clean.csv,75,1890,1931,50,50,0.68,0.32,0.514259,0.88,0.44,16,1000,1000,imagen | cielo | pelicula | pyramid | enano | proyeccion | alrededor | gobernador | aztec | todavia

@@ -55,6 +55,16 @@ class CorpusAnalyzer:
         self.column_combo = ttk.Combobox(control_frame, textvariable=self.column_var, width=30)
         self.column_combo.grid(row=1, column=1, sticky=tk.W, padx=(5, 0), pady=2)
         
+        # Segunda columna para comparación
+        ttk.Label(control_frame, text="Comparar con:").grid(row=1, column=2, sticky=tk.W, pady=2)
+        self.compare_column_var = tk.StringVar()
+        self.compare_column_combo = ttk.Combobox(control_frame, textvariable=self.compare_column_var, width=30)
+        self.compare_column_combo.grid(row=1, column=3, sticky=tk.W, padx=(5, 0), pady=2)
+
+
+
+
+
         # Parámetros de n-gramas
         ttk.Label(control_frame, text="N-gramas (n):").grid(row=2, column=0, sticky=tk.W, pady=2)
         self.n_var = tk.StringVar(value="2")
@@ -73,7 +83,9 @@ class CorpusAnalyzer:
         ttk.Button(button_frame, text="Análisis N-gramas", command=self.analyze_ngrams).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Estadísticas", command=self.show_stats).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Limpiar", command=self.clear_plots).pack(side=tk.LEFT, padx=5)
-        
+        ttk.Button(button_frame, text="Comparar Columnas", command=self.compare_columns).pack(side=tk.LEFT, padx=5)
+        ttk.Button(button_frame, text="Comparar N-gramas", command=self.compare_ngrams).pack(side=tk.LEFT, padx=5)
+
         # Panel de visualización
         viz_frame = ttk.LabelFrame(main_frame, text="Visualizaciones", padding="5")
         viz_frame.grid(row=1, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
@@ -394,6 +406,113 @@ Total palabras únicas: {len(set(all_words))}
             return False
         
         return True
+    def compare_columns(self):
+        if self.data is None:
+            messagebox.showwarning("Advertencia", "Debe cargar un archivo CSV.")
+            return
+
+        col1 = self.column_var.get()
+        col2 = self.compare_column_var.get()
+
+        if not col1 or not col2:
+            messagebox.showwarning("Advertencia", "Debe seleccionar ambas columnas para comparar.")
+            return
+
+        if col1 == col2:
+            messagebox.showwarning("Advertencia", "Seleccione columnas diferentes para comparar.")
+            return
+
+        try:
+            texts1 = self.preprocess_text(self.data[col1].dropna())
+            texts2 = self.preprocess_text(self.data[col2].dropna())
+            
+            if not texts1 or not texts2:
+                messagebox.showwarning("Advertencia", "No hay texto válido en alguna de las columnas.")
+                return
+
+            combined_text1 = ' '.join(texts1)
+            combined_text2 = ' '.join(texts2)
+
+            wordcloud1 = WordCloud(width=800, height=400, background_color='white', max_words=100, colormap='viridis').generate(combined_text1)
+            wordcloud2 = WordCloud(width=800, height=400, background_color='white', max_words=100, colormap='plasma').generate(combined_text2)
+
+            fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+            ax1.imshow(wordcloud1, interpolation='bilinear')
+            ax1.axis('off')
+            ax1.set_title(f'Nube de Palabras: {col1}')
+
+            ax2.imshow(wordcloud2, interpolation='bilinear')
+            ax2.axis('off')
+            ax2.set_title(f'Nube de Palabras: {col2}')
+
+            fig.suptitle(f'Comparación de columnas - {col1} vs {col2}', fontsize=14, fontweight='bold')
+            plt.tight_layout()
+
+            self.add_plot_to_notebook(fig, f"Comparación - {col1} vs {col2}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"No se pudo comparar las columnas: {str(e)}")
+    def compare_ngrams(self):
+        if self.data is None:
+            messagebox.showwarning("Advertencia", "Debe cargar un archivo CSV.")
+            return
+
+        col1 = self.column_var.get()
+        col2 = self.compare_column_var.get()
+
+        if not col1 or not col2:
+            messagebox.showwarning("Advertencia", "Debe seleccionar ambas columnas para comparar.")
+            return
+
+        if col1 == col2:
+            messagebox.showwarning("Advertencia", "Seleccione columnas diferentes para comparar.")
+            return
+
+        try:
+            n = int(self.n_var.get())
+            max_words = int(self.max_words_var.get())
+
+            texts1 = self.preprocess_text(self.data[col1].dropna())
+            texts2 = self.preprocess_text(self.data[col2].dropna())
+
+            if not texts1 or not texts2:
+                messagebox.showwarning("Advertencia", "No hay texto válido en alguna de las columnas.")
+                return
+
+            def get_top_ngrams(texts):
+                vectorizer = CountVectorizer(ngram_range=(n, n), max_features=max_words, stop_words='english')
+                ngram_matrix = vectorizer.fit_transform(texts)
+                freqs = ngram_matrix.sum(axis=0).A1
+                ngrams = vectorizer.get_feature_names_out()
+                df = pd.DataFrame({'ngram': ngrams, 'frequency': freqs})
+                return df.sort_values('frequency', ascending=False).head(10)
+
+            df1 = get_top_ngrams(texts1)
+            df2 = get_top_ngrams(texts2)
+
+            # Unir para alinear en y (por etiqueta)
+            merged = pd.merge(df1, df2, on='ngram', how='outer', suffixes=(f'_{col1}', f'_{col2}')).fillna(0)
+            merged = merged.sort_values(by=f'frequency_{col1}', ascending=True)
+
+            fig, ax = plt.subplots(figsize=(12, 8))
+            bar_width = 0.4
+            y_pos = np.arange(len(merged))
+
+            ax.barh(y_pos - bar_width/2, merged[f'frequency_{col1}'], height=bar_width, label=col1, color='skyblue')
+            ax.barh(y_pos + bar_width/2, merged[f'frequency_{col2}'], height=bar_width, label=col2, color='salmon')
+
+            ax.set_yticks(y_pos)
+            ax.set_yticklabels(merged['ngram'])
+            ax.set_xlabel('Frecuencia')
+            ax.set_title(f'Comparación de {n}-gramas: {col1} vs {col2}')
+            ax.legend()
+
+            plt.tight_layout()
+            self.add_plot_to_notebook(fig, f"Comparación {n}-gramas: {col1} vs {col2}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"No se pudo comparar los n-gramas: {str(e)}")
+
 
 def main():
     root = tk.Tk()

@@ -1,4 +1,4 @@
-#Libs
+# Libs
 import numpy as np
 import pandas as pd
 import re
@@ -13,7 +13,7 @@ nltk.download('stopwords')
 toktok = ToktokTokenizer()
 stop_words = set(stopwords.words('english'))
 
-#Preprocesamiento
+# Preprocesamiento
 
 def remove_stop_words(text):
     return " ".join([word for word in text.split() if word.lower() not in stop_words])
@@ -31,6 +31,15 @@ def avoidVoid(text):
 def get_bigrams(words):
     return " ".join([f"{words[i]}_{words[i+1]}" for i in range(len(words) - 1)])
 
+def remove_consecutive_duplicates(words):
+    if not words:
+        return []
+    result = [words[0]]
+    for word in words[1:]:
+        if word != result[-1]:
+            result.append(word)
+    return result
+
 def preprocess(df, minrep=1, bigramas=0, max_doc_freq=0.7):
     new_df = []
     list_df = []
@@ -44,6 +53,7 @@ def preprocess(df, minrep=1, bigramas=0, max_doc_freq=0.7):
             text = remove_stop_words(text)
             text = remove_punctuation_mark(text)
             words = tokens(text)
+            words = remove_consecutive_duplicates(words)  # <--- Aquí se eliminan duplicados consecutivos
 
             if bigramas == 0:
                 processed_text = " ".join(words)
@@ -79,15 +89,19 @@ def remove_repeated_ngrams(text, max_ngram_size=5):
             text = new_text
     return text
 
+# Rutas
 global_path = r'C:\Users\pumgu\VERANO2025\Descripciones'
 coleccion = 'ACAPULCO_desc.csv'
 file_path = f'{global_path}/{coleccion}'
 text_df = pd.read_csv(file_path)
+
+# Procesamiento
 raw_texts = text_df['prompt'].tolist()
-# Usar un umbral de frecuencia relativa 
 processed_texts, vocabulario = preprocess(raw_texts, bigramas=0, max_doc_freq=0.05)
 processed_texts = [remove_repeated_ngrams(text) for text in processed_texts]
 text_df['prompt'] = processed_texts
+
+# Guardar
 save_path = r'C:\Users\pumgu\VERANO2025\Corpus_clean\ACAPULCO_clean.csv'
 text_df.to_csv(save_path, sep=',', index=False, quoting=csv.QUOTE_NONE, escapechar='\\')
 print("Archivo guardado en:", save_path)

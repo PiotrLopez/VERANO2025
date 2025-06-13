@@ -1,0 +1,847 @@
+2025-06-10 21:54:46,357 - INFO -    ï Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 21:54:46,357 - INFO -    ï Con im·genes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 21:54:46,357 - INFO -    ï Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 21:54:46,359 - INFO - 
+================================================================================
+2025-06-10 21:54:46,361 - INFO - ================================================================================
+2025-06-10 21:59:56,080 - INFO -    ï Registros procesados: 371
+2025-06-10 21:59:56,080 - INFO -    ï Textos vacÌos desc: 0
+2025-06-10 21:59:56,080 - INFO -    ï Textos vacÌos img: 0
+2025-06-10 21:59:56,081 - INFO -    ï Archivo guardado: C:\Users\pumgu\VERANO2025\Corpus_clean\Rivera_MayaCHETUMAL_clean.csv
+2025-06-10 21:59:56,083 - INFO - 
+================================================================================
+2025-06-10 21:59:56,085 - INFO - ================================================================================
+2025-06-10 22:12:54,373 - INFO - 
+================================================================================
+2025-06-10 22:12:54,375 - INFO - ================================================================================
+2025-06-10 22:24:32,270 - INFO -    ï Registros procesados: 418
+2025-06-10 22:24:32,270 - INFO -    ï Textos vacÌos desc: 0
+2025-06-10 22:24:32,270 - INFO -    ï Textos vacÌos img: 0
+2025-06-10 22:24:32,270 - INFO -    ï Archivo guardado: C:\Users\pumgu\VERANO2025\Corpus_clean\Rivera_MayaCOZUMEL_clean.csv
+2025-06-10 22:24:32,273 - INFO - 
+================================================================================
+2025-06-10 22:24:32,274 - INFO - ================================================================================
+2025-06-10 22:35:58,134 - INFO -    ï Registros procesados: 395
+2025-06-10 22:35:58,134 - INFO -    ï Textos vacÌos desc: 0
+2025-06-10 22:35:58,134 - INFO -    ï Textos vacÌos img: 0
+2025-06-10 22:35:58,134 - INFO -    ï Archivo guardado: C:\Users\pumgu\VERANO2025\Corpus_clean\Rivera_MayaISLAMUJERES_clean.csv
+2025-06-10 22:35:58,137 - INFO - 
+================================================================================
+2025-06-10 22:35:58,138 - INFO - ================================================================================
+2025-06-10 22:35:58,177 - INFO - 
+================================================================================
+2025-06-10 22:35:58,178 - INFO - ================================================================================
+2025-06-10 22:40:43,188 - INFO -    ï Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 22:40:43,188 - INFO -    ï Con im·genes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 22:40:43,188 - INFO -    ï Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 22:40:43,190 - INFO - 
+================================================================================
+2025-06-10 22:40:43,191 - INFO - ================================================================================
+2025-06-10 22:47:47,762 - INFO - 
+================================================================================
+2025-06-10 22:47:47,764 - INFO - ================================================================================
+2025-06-10 22:47:47,772 - INFO - 
+================================================================================
+2025-06-10 22:47:47,773 - INFO - ================================================================================
+2025-06-10 23:23:39,254 - INFO -    ï Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 23:23:39,254 - INFO -    ï Con im·genes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 23:23:39,254 - INFO -    ï Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 23:23:39,257 - INFO - 
+================================================================================
+2025-06-10 23:23:39,258 - INFO - ================================================================================
+2025-06-10 23:28:40,150 - INFO - OK NLTK configurado correctamente
+2025-06-10 23:28:40,150 - INFO - 
+INICIO PROCESAMIENTO AUTOMATIZADO
+2025-06-10 23:28:40,150 - INFO - FECHA Y HORA: 2025-06-10 23:28:40
+2025-06-10 23:28:40,151 - INFO - CIUDADES Ciudades encontradas:
+2025-06-10 23:28:40,151 - INFO -    ‚Ä¢ Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 23:28:40,151 - INFO -    ‚Ä¢ Con imagenes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 23:28:40,151 - INFO -    ‚Ä¢ Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-10 23:28:40,151 - INFO - FILTRO Procesando solo ciudades especificas: ['CHICHENITZA', 'UXMAL']
+2025-06-10 23:28:40,151 - INFO - 
+PROCESANDO Procesando ciudad 1/2: CHICHENITZA
+2025-06-10 23:28:40,151 - INFO - 
+================================================================================
+2025-06-10 23:28:40,152 - INFO - PROCESANDO CIUDAD: CHICHENITZA
+2025-06-10 23:28:40,152 - INFO - ================================================================================
+2025-06-10 23:28:40,152 - INFO - ARCHIVOS [CHICHENITZA] Cargando archivos...
+2025-06-10 23:28:40,185 - INFO - DATOS [CHICHENITZA] Procesando 443 registros (de 443 desc, 671 img)
+2025-06-10 23:28:40,186 - INFO - PASO1 [CHICHENITZA] PASO 1: Traduciendo textos...
+2025-06-10 23:28:40,187 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-10 23:28:44,722 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-10 23:28:52,054 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-10 23:28:56,384 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-10 23:29:02,352 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-10 23:29:09,167 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-10 23:29:14,371 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-10 23:29:21,847 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-10 23:29:30,492 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-10 23:29:35,711 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-10 23:29:38,683 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-10 23:29:42,241 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-10 23:29:49,072 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-10 23:29:52,121 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-10 23:29:57,847 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-10 23:30:03,388 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-10 23:30:05,795 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-10 23:30:10,162 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-10 23:30:12,937 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-10 23:30:19,968 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-10 23:30:29,384 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-10 23:30:35,687 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-10 23:30:44,903 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-10 23:30:52,864 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-10 23:30:59,392 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-10 23:31:05,145 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-10 23:31:10,467 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-10 23:31:15,381 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-10 23:31:20,374 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-10 23:31:33,305 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-10 23:31:37,203 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-10 23:31:40,099 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-10 23:31:43,052 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-10 23:31:47,593 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-10 23:31:52,751 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-10 23:31:58,060 - INFO -    [CHICHENITZA] OK Traducidos: 350/443
+2025-06-10 23:32:01,333 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-10 23:32:07,672 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-10 23:32:15,406 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-10 23:32:20,170 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-10 23:32:25,204 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-10 23:32:33,981 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-10 23:32:39,397 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-10 23:32:45,063 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-10 23:32:49,459 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-10 23:32:50,204 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-10 23:32:50,204 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-10 23:32:53,074 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-10 23:32:56,120 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-10 23:33:00,373 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-10 23:33:04,133 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-10 23:33:06,758 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-10 23:33:09,550 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-10 23:33:12,178 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-10 23:33:14,710 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-10 23:33:17,363 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-10 23:33:20,274 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-10 23:33:23,139 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-10 23:33:27,366 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-10 23:33:30,195 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-10 23:33:32,824 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-10 23:33:35,685 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-10 23:33:39,406 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-10 23:33:42,454 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-10 23:33:45,511 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-10 23:33:48,420 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-10 23:33:51,411 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-10 23:33:54,399 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-10 23:33:56,873 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-10 23:33:59,998 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-10 23:34:02,947 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-10 23:34:05,618 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-10 23:34:08,424 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-10 23:34:11,220 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-10 23:34:14,184 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-10 23:34:17,926 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-10 23:34:20,727 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-10 23:34:24,540 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-10 23:34:27,944 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-10 23:34:30,626 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-10 23:34:33,348 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-10 23:34:36,517 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-10 23:34:39,654 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-10 23:34:42,141 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-10 23:34:44,793 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-10 23:34:48,478 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-10 23:34:51,746 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-10 23:34:57,225 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-10 23:35:01,034 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-10 23:35:05,478 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-10 23:35:06,290 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-10 23:35:06,291 - INFO - PASO2 [CHICHENITZA] PASO 2: Procesando textos traducidos...
+2025-06-10 23:35:07,364 - INFO - PASO3 [CHICHENITZA] PASO 3: Creando dataset final...
+2025-06-10 23:35:07,364 - ERROR - ERROR [CHICHENITZA] Error procesando ciudad: All arrays must be of the same length
+2025-06-10 23:35:07,365 - ERROR - ERROR CHICHENITZA fallo en el procesamiento
+2025-06-10 23:35:07,365 - INFO - 
+PROCESANDO Procesando ciudad 2/2: UXMAL
+2025-06-10 23:35:07,365 - INFO - 
+================================================================================
+2025-06-10 23:35:07,365 - INFO - PROCESANDO CIUDAD: UXMAL
+2025-06-10 23:35:07,365 - INFO - ================================================================================
+2025-06-10 23:35:07,366 - INFO - ARCHIVOS [UXMAL] Cargando archivos...
+2025-06-10 23:35:07,368 - ERROR - ERROR [UXMAL] Error procesando ciudad: 'utf-8' codec can't decode byte 0xed in position 1091: invalid continuation byte
+2025-06-10 23:35:07,369 - ERROR - ERROR UXMAL fallo en el procesamiento
+2025-06-10 23:35:07,369 - INFO - 
+================================================================================
+2025-06-10 23:35:07,369 - INFO - RESUMEN FINAL DEL PROCESAMIENTO
+2025-06-10 23:35:07,369 - INFO - ================================================================================
+2025-06-10 23:35:07,369 - INFO - TOTAL Total de ciudades: 2
+2025-06-10 23:35:07,370 - INFO - EXITOSAS Exitosas: 0
+2025-06-10 23:35:07,370 - INFO - FALLIDAS Fallidas: 2
+2025-06-10 23:35:07,370 - WARNING - ADVERTENCIA Ciudades que fallaron: ['CHICHENITZA', 'UXMAL']
+2025-06-10 23:35:07,370 - INFO - FINALIZADO Procesamiento completado!
+2025-06-11 12:42:54,831 - INFO - OK NLTK configurado correctamente
+2025-06-11 12:42:54,832 - INFO - 
+INICIO PROCESAMIENTO AUTOMATIZADO
+2025-06-11 12:42:54,832 - INFO - FECHA Y HORA: 2025-06-11 12:42:54
+2025-06-11 12:42:54,833 - INFO - CIUDADES Ciudades encontradas:
+2025-06-11 12:42:54,833 - INFO -    ‚Ä¢ Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:42:54,833 - INFO -    ‚Ä¢ Con imagenes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:42:54,833 - INFO -    ‚Ä¢ Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:42:54,833 - INFO - FILTRO Procesando solo ciudades especificas: ['CHICHENITZA', 'UXMAL']
+2025-06-11 12:42:54,833 - INFO - 
+PROCESANDO Procesando ciudad 1/2: CHICHENITZA
+2025-06-11 12:42:54,833 - INFO - 
+================================================================================
+2025-06-11 12:42:54,833 - INFO - PROCESANDO CIUDAD: CHICHENITZA
+2025-06-11 12:42:54,833 - INFO - ================================================================================
+2025-06-11 12:42:54,834 - INFO - ARCHIVOS [CHICHENITZA] Cargando archivos...
+2025-06-11 12:42:54,869 - INFO - DATOS [CHICHENITZA] Procesando 10 registros (de 443 desc, 671 img)
+2025-06-11 12:42:54,872 - INFO - PASO1 [CHICHENITZA] PASO 1: Traduciendo textos...
+2025-06-11 12:42:54,873 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 10 textos (en -> es)...
+2025-06-11 12:42:58,353 - INFO -    [CHICHENITZA] OK Traducidos: 10/10
+2025-06-11 12:42:58,353 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 10 textos procesados
+2025-06-11 12:42:58,353 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 10 textos (en -> es)...
+2025-06-11 12:43:00,756 - INFO -    [CHICHENITZA] OK Traducidos: 10/10
+2025-06-11 12:43:00,756 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 10 textos procesados
+2025-06-11 12:43:00,756 - INFO - PASO2 [CHICHENITZA] PASO 2: Procesando textos traducidos...
+2025-06-11 12:43:00,822 - INFO - PASO3 [CHICHENITZA] PASO 3: Creando dataset final...
+2025-06-11 12:43:00,835 - INFO - EXITO [CHICHENITZA] COMPLETADO:
+2025-06-11 12:43:00,835 - INFO -    ‚Ä¢ Registros procesados: 10
+2025-06-11 12:43:00,836 - INFO -    ‚Ä¢ Textos vacios desc: 0
+2025-06-11 12:43:00,836 - INFO -    ‚Ä¢ Textos vacios img: 0
+2025-06-11 12:43:00,836 - INFO -    ‚Ä¢ Archivo guardado: C:\Users\pumgu\VERANO2025\Corpus_clean\Rivera_MayaCHICHENITZA_clean.csv
+2025-06-11 12:43:00,837 - INFO - EXITO CHICHENITZA procesada exitosamente
+2025-06-11 12:43:00,838 - INFO - 
+PROCESANDO Procesando ciudad 2/2: UXMAL
+2025-06-11 12:43:00,838 - INFO - 
+================================================================================
+2025-06-11 12:43:00,838 - INFO - PROCESANDO CIUDAD: UXMAL
+2025-06-11 12:43:00,838 - INFO - ================================================================================
+2025-06-11 12:43:00,839 - INFO - ARCHIVOS [UXMAL] Cargando archivos...
+2025-06-11 12:43:00,845 - ERROR - ERROR [UXMAL] Error procesando ciudad: 'utf-8' codec can't decode byte 0xed in position 1091: invalid continuation byte
+2025-06-11 12:43:00,846 - ERROR - ERROR UXMAL fallo en el procesamiento
+2025-06-11 12:43:00,846 - INFO - 
+================================================================================
+2025-06-11 12:43:00,846 - INFO - RESUMEN FINAL DEL PROCESAMIENTO
+2025-06-11 12:43:00,846 - INFO - ================================================================================
+2025-06-11 12:43:00,847 - INFO - TOTAL Total de ciudades: 2
+2025-06-11 12:43:00,847 - INFO - EXITOSAS Exitosas: 1
+2025-06-11 12:43:00,847 - INFO - FALLIDAS Fallidas: 1
+2025-06-11 12:43:00,847 - WARNING - ADVERTENCIA Ciudades que fallaron: ['UXMAL']
+2025-06-11 12:43:00,847 - INFO - FINALIZADO Procesamiento completado!
+2025-06-11 12:45:06,728 - INFO - OK NLTK configurado correctamente
+2025-06-11 12:45:06,728 - INFO - 
+INICIO PROCESAMIENTO AUTOMATIZADO
+2025-06-11 12:45:06,728 - INFO - FECHA Y HORA: 2025-06-11 12:45:06
+2025-06-11 12:45:06,730 - INFO - CIUDADES Ciudades encontradas:
+2025-06-11 12:45:06,730 - INFO -    ‚Ä¢ Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:45:06,730 - INFO -    ‚Ä¢ Con imagenes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:45:06,730 - INFO -    ‚Ä¢ Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:45:06,730 - INFO - FILTRO Procesando solo ciudades especificas: ['CHICHENITZA', 'UXMAL']
+2025-06-11 12:45:06,730 - INFO - 
+PROCESANDO Procesando ciudad 1/2: CHICHENITZA
+2025-06-11 12:45:06,731 - INFO - 
+================================================================================
+2025-06-11 12:45:06,731 - INFO - PROCESANDO CIUDAD: CHICHENITZA
+2025-06-11 12:45:06,731 - INFO - ================================================================================
+2025-06-11 12:45:06,731 - INFO - ARCHIVOS [CHICHENITZA] Cargando archivos...
+2025-06-11 12:45:06,769 - INFO - DATOS [CHICHENITZA] Procesando 443 registros (de 443 desc, 671 img)
+2025-06-11 12:45:06,772 - INFO - PASO1 [CHICHENITZA] PASO 1: Traduciendo textos...
+2025-06-11 12:45:06,772 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-11 12:45:11,460 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-11 12:45:20,040 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-11 12:45:25,180 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-11 12:45:31,891 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-11 12:45:38,817 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-11 12:45:44,153 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-11 12:45:51,782 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-11 12:45:56,987 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-11 12:46:02,879 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-11 12:46:05,571 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-11 12:46:10,054 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-11 12:46:15,922 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-11 12:46:18,944 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-11 12:46:25,818 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-11 12:46:31,163 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-11 12:46:33,723 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-11 12:46:38,608 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-11 12:46:41,253 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-11 12:46:48,897 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-11 12:46:53,831 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-11 12:47:01,019 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-11 12:47:09,233 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-11 12:47:17,484 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-11 12:47:23,189 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-11 12:47:30,315 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-11 12:47:36,033 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-11 12:47:40,751 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-11 12:47:45,580 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-11 12:47:55,364 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-11 12:47:58,043 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-11 12:48:00,577 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-11 12:48:04,105 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-11 12:48:09,423 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-11 12:48:15,157 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-11 12:48:21,006 - INFO -    [CHICHENITZA] OK Traducidos: 350/443
+2025-06-11 12:48:24,880 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-11 12:48:30,508 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-11 12:48:38,741 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-11 12:48:43,376 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-11 12:48:46,482 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-11 12:48:57,280 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-11 12:49:02,410 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-11 12:49:08,611 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-11 12:49:14,724 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-11 12:49:15,498 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-11 12:49:15,498 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-11 12:49:19,108 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-11 12:49:21,868 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-11 12:49:28,110 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-11 12:49:31,066 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-11 12:49:33,738 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-11 12:49:36,527 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-11 12:49:39,105 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-11 12:49:41,740 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-11 12:49:44,706 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-11 12:49:47,231 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-11 12:49:50,417 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-11 12:49:53,229 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-11 12:49:55,860 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-11 12:49:58,345 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-11 12:50:00,935 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-11 12:50:04,434 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-11 12:50:07,044 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-11 12:50:09,847 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-11 12:50:14,243 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-11 12:50:16,928 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-11 12:50:19,617 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-11 12:50:23,253 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-11 12:50:27,545 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-11 12:50:30,096 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-11 12:50:32,699 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-11 12:50:35,333 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-11 12:50:37,924 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-11 12:50:40,604 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-11 12:50:43,691 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-11 12:50:46,684 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-11 12:50:49,313 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-11 12:50:52,085 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-11 12:50:56,245 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-11 12:51:00,182 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-11 12:51:03,011 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-11 12:51:05,736 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-11 12:51:08,191 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-11 12:51:10,737 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-11 12:51:13,420 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-11 12:51:16,011 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-11 12:51:18,750 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-11 12:51:22,024 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-11 12:51:29,541 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-11 12:51:30,410 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-11 12:51:30,410 - INFO - PASO2 [CHICHENITZA] PASO 2: Procesando textos traducidos...
+2025-06-11 12:51:31,835 - INFO - PASO3 [CHICHENITZA] PASO 3: Creando dataset final...
+2025-06-11 12:51:31,836 - ERROR - ERROR [CHICHENITZA] Error procesando ciudad: All arrays must be of the same length
+2025-06-11 12:51:31,837 - ERROR - ERROR CHICHENITZA fallo en el procesamiento
+2025-06-11 12:51:31,837 - INFO - 
+PROCESANDO Procesando ciudad 2/2: UXMAL
+2025-06-11 12:51:31,837 - INFO - 
+================================================================================
+2025-06-11 12:51:31,837 - INFO - PROCESANDO CIUDAD: UXMAL
+2025-06-11 12:51:31,837 - INFO - ================================================================================
+2025-06-11 12:51:31,838 - INFO - ARCHIVOS [UXMAL] Cargando archivos...
+2025-06-11 12:51:31,842 - ERROR - ERROR [UXMAL] Error procesando ciudad: 'utf-8' codec can't decode byte 0xed in position 1091: invalid continuation byte
+2025-06-11 12:51:31,842 - ERROR - ERROR UXMAL fallo en el procesamiento
+2025-06-11 12:51:31,842 - INFO - 
+================================================================================
+2025-06-11 12:51:31,842 - INFO - RESUMEN FINAL DEL PROCESAMIENTO
+2025-06-11 12:51:31,842 - INFO - ================================================================================
+2025-06-11 12:51:31,842 - INFO - TOTAL Total de ciudades: 2
+2025-06-11 12:51:31,843 - INFO - EXITOSAS Exitosas: 0
+2025-06-11 12:51:31,843 - INFO - FALLIDAS Fallidas: 2
+2025-06-11 12:51:31,843 - WARNING - ADVERTENCIA Ciudades que fallaron: ['CHICHENITZA', 'UXMAL']
+2025-06-11 12:51:31,843 - INFO - FINALIZADO Procesamiento completado!
+2025-06-11 12:54:45,122 - INFO - OK NLTK configurado correctamente
+2025-06-11 12:54:45,122 - INFO - 
+INICIO PROCESAMIENTO AUTOMATIZADO
+2025-06-11 12:54:45,123 - INFO - FECHA Y HORA: 2025-06-11 12:54:45
+2025-06-11 12:54:45,123 - INFO - CIUDADES Ciudades encontradas:
+2025-06-11 12:54:45,123 - INFO -    ‚Ä¢ Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:54:45,123 - INFO -    ‚Ä¢ Con imagenes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:54:45,124 - INFO -    ‚Ä¢ Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 12:54:45,124 - INFO - FILTRO Procesando solo ciudades especificas: ['CHICHENITZA', 'UXMAL']
+2025-06-11 12:54:45,124 - INFO - 
+PROCESANDO Procesando ciudad 1/2: CHICHENITZA
+2025-06-11 12:54:45,124 - INFO - 
+================================================================================
+2025-06-11 12:54:45,124 - INFO - PROCESANDO CIUDAD: CHICHENITZA
+2025-06-11 12:54:45,124 - INFO - ================================================================================
+2025-06-11 12:54:45,124 - INFO - ARCHIVOS [CHICHENITZA] Cargando archivos...
+2025-06-11 12:54:45,183 - INFO - DATOS [CHICHENITZA] Procesando 443 registros (de 443 desc, 671 img)
+2025-06-11 12:54:45,184 - INFO - PASO1 [CHICHENITZA] PASO 1: Traduciendo textos...
+2025-06-11 12:54:45,185 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-11 12:54:51,012 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-11 12:54:57,525 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-11 12:55:02,420 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-11 12:55:08,057 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-11 12:55:16,428 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-11 12:55:20,422 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-11 12:55:30,463 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-11 12:55:34,920 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-11 12:55:39,970 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-11 12:55:42,491 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-11 12:55:46,790 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-11 12:55:53,832 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-11 12:55:57,375 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-11 12:56:01,534 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-11 12:56:07,630 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-11 12:56:10,506 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-11 12:56:15,627 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-11 12:56:18,162 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-11 12:56:26,186 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-11 12:56:32,023 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-11 12:56:38,064 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-11 12:56:45,608 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-11 12:56:53,834 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-11 12:56:59,587 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-11 12:57:04,978 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-11 12:57:10,674 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-11 12:57:16,256 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-11 12:57:22,020 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-11 12:57:32,593 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-11 12:57:36,821 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-11 12:57:39,264 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-11 12:57:42,097 - WARNING -    [CHICHENITZA] ADVERTENCIA Error traduciendo texto 319: ('Connection aborted.', ConnectionResetError(10054, 'Se ha forzado la interrupci√≥n de una conexi√≥n existente por el host remoto', None, 10054, None))
+2025-06-11 12:57:42,315 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-11 12:57:47,392 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-11 12:57:52,556 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-11 12:57:57,348 - INFO -    [CHICHENITZA] OK Traducidos: 350/443
+2025-06-11 12:58:01,255 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-11 12:58:05,536 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-11 12:58:09,792 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-11 12:58:14,039 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-11 12:58:17,677 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-11 12:58:27,937 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-11 12:58:32,959 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-11 12:58:37,591 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-11 12:58:43,906 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-11 12:58:44,633 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-11 12:58:44,633 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-11 12:58:54,946 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-11 12:59:03,327 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-11 12:59:14,558 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-11 12:59:25,483 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-11 12:59:35,062 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-11 12:59:42,327 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-11 12:59:49,812 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-11 12:59:58,604 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-11 13:00:05,588 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-11 13:00:15,466 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-11 13:00:21,081 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-11 13:00:31,719 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-11 13:00:41,767 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-11 13:00:48,762 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-11 13:00:58,221 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-11 13:01:05,554 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-11 13:01:14,100 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-11 13:01:24,193 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-11 13:01:29,799 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-11 13:01:37,103 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-11 13:01:44,026 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-11 13:01:50,104 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-11 13:01:56,684 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-11 13:02:04,355 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-11 13:02:11,167 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-11 13:02:17,706 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-11 13:02:21,123 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-11 13:02:25,530 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-11 13:02:28,665 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-11 13:02:31,580 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-11 13:02:34,560 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-11 13:02:37,136 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-11 13:02:42,738 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-11 13:02:47,048 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-11 13:02:55,051 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-11 13:03:03,565 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-11 13:03:09,458 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-11 13:03:14,540 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-11 13:03:21,711 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-11 13:03:25,695 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-11 13:03:28,824 - WARNING -    [CHICHENITZA] ADVERTENCIA Error traduciendo texto 419: ('Connection aborted.', ConnectionResetError(10054, 'Se ha forzado la interrupci√≥n de una conexi√≥n existente por el host remoto', None, 10054, None))
+2025-06-11 13:03:29,053 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-11 13:03:32,070 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-11 13:03:35,898 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-11 13:03:37,362 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-11 13:03:37,363 - INFO - PASO2 [CHICHENITZA] PASO 2: Procesando textos traducidos...
+2025-06-11 13:03:38,679 - INFO - PASO3 [CHICHENITZA] PASO 3: Creando dataset final...
+2025-06-11 13:03:38,680 - ERROR - ERROR [CHICHENITZA] Error procesando ciudad: All arrays must be of the same length
+2025-06-11 13:03:38,681 - ERROR - ERROR CHICHENITZA fallo en el procesamiento
+2025-06-11 13:03:38,681 - INFO - 
+PROCESANDO Procesando ciudad 2/2: UXMAL
+2025-06-11 13:03:38,681 - INFO - 
+================================================================================
+2025-06-11 13:03:38,681 - INFO - PROCESANDO CIUDAD: UXMAL
+2025-06-11 13:03:38,681 - INFO - ================================================================================
+2025-06-11 13:03:38,682 - INFO - ARCHIVOS [UXMAL] Cargando archivos...
+2025-06-11 13:03:38,721 - INFO - DATOS [UXMAL] Procesando 75 registros (de 133 desc, 75 img)
+2025-06-11 13:03:38,722 - INFO - PASO1 [UXMAL] PASO 1: Traduciendo textos...
+2025-06-11 13:03:38,722 - INFO - TRADUCCION [UXMAL] Iniciando traduccion de 75 textos (en -> es)...
+2025-06-11 13:03:44,685 - INFO -    [UXMAL] OK Traducidos: 10/75
+2025-06-11 13:03:48,936 - INFO -    [UXMAL] OK Traducidos: 20/75
+2025-06-11 13:03:51,556 - INFO -    [UXMAL] OK Traducidos: 30/75
+2025-06-11 13:03:54,945 - INFO -    [UXMAL] OK Traducidos: 40/75
+2025-06-11 13:03:59,653 - INFO -    [UXMAL] OK Traducidos: 50/75
+2025-06-11 13:04:05,028 - INFO -    [UXMAL] OK Traducidos: 60/75
+2025-06-11 13:04:11,767 - INFO -    [UXMAL] OK Traducidos: 70/75
+2025-06-11 13:04:17,344 - INFO - COMPLETADO [UXMAL] Traduccion completada: 75 textos procesados
+2025-06-11 13:04:17,344 - INFO - TRADUCCION [UXMAL] Iniciando traduccion de 75 textos (en -> es)...
+2025-06-11 13:04:23,352 - INFO -    [UXMAL] OK Traducidos: 10/75
+2025-06-11 13:04:31,135 - INFO -    [UXMAL] OK Traducidos: 20/75
+2025-06-11 13:04:36,972 - INFO -    [UXMAL] OK Traducidos: 30/75
+2025-06-11 13:04:44,477 - INFO -    [UXMAL] OK Traducidos: 40/75
+2025-06-11 13:04:51,395 - INFO -    [UXMAL] OK Traducidos: 50/75
+2025-06-11 13:04:56,452 - INFO -    [UXMAL] OK Traducidos: 60/75
+2025-06-11 13:05:01,946 - INFO -    [UXMAL] OK Traducidos: 70/75
+2025-06-11 13:05:04,958 - INFO - COMPLETADO [UXMAL] Traduccion completada: 75 textos procesados
+2025-06-11 13:05:04,959 - INFO - PASO2 [UXMAL] PASO 2: Procesando textos traducidos...
+2025-06-11 13:05:05,076 - INFO - PASO3 [UXMAL] PASO 3: Creando dataset final...
+2025-06-11 13:05:05,077 - ERROR - ERROR [UXMAL] Error procesando ciudad: All arrays must be of the same length
+2025-06-11 13:05:05,077 - ERROR - ERROR UXMAL fallo en el procesamiento
+2025-06-11 13:05:05,077 - INFO - 
+================================================================================
+2025-06-11 13:05:05,078 - INFO - RESUMEN FINAL DEL PROCESAMIENTO
+2025-06-11 13:05:05,078 - INFO - ================================================================================
+2025-06-11 13:05:05,078 - INFO - TOTAL Total de ciudades: 2
+2025-06-11 13:05:05,078 - INFO - EXITOSAS Exitosas: 0
+2025-06-11 13:05:05,078 - INFO - FALLIDAS Fallidas: 2
+2025-06-11 13:05:05,078 - WARNING - ADVERTENCIA Ciudades que fallaron: ['CHICHENITZA', 'UXMAL']
+2025-06-11 13:05:05,078 - INFO - FINALIZADO Procesamiento completado!
+2025-06-11 13:35:59,713 - INFO - OK NLTK configurado correctamente
+2025-06-11 13:35:59,714 - INFO - 
+INICIO PROCESAMIENTO AUTOMATIZADO
+2025-06-11 13:35:59,714 - INFO - FECHA Y HORA: 2025-06-11 13:35:59
+2025-06-11 13:35:59,714 - INFO - CIUDADES Ciudades encontradas:
+2025-06-11 13:35:59,715 - INFO -    ‚Ä¢ Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 13:35:59,715 - INFO -    ‚Ä¢ Con imagenes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 13:35:59,715 - INFO -    ‚Ä¢ Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 13:35:59,715 - INFO - FILTRO Procesando solo ciudades especificas: ['CHICHENITZA', 'UXMAL']
+2025-06-11 13:35:59,715 - INFO - 
+PROCESANDO Procesando ciudad 1/2: CHICHENITZA
+2025-06-11 13:35:59,715 - INFO - 
+================================================================================
+2025-06-11 13:35:59,715 - INFO - PROCESANDO CIUDAD: CHICHENITZA
+2025-06-11 13:35:59,715 - INFO - ================================================================================
+2025-06-11 13:35:59,716 - INFO - ARCHIVOS [CHICHENITZA] Cargando archivos...
+2025-06-11 13:35:59,768 - INFO - DATOS [CHICHENITZA] Procesando 443 registros (de 443 desc, 671 img)
+2025-06-11 13:35:59,771 - INFO - PASO1 [CHICHENITZA] PASO 1: Traduciendo textos...
+2025-06-11 13:35:59,771 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-11 13:36:03,817 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-11 13:36:10,226 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-11 13:36:14,998 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-11 13:36:20,553 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-11 13:36:27,515 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-11 13:36:32,242 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-11 13:36:40,234 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-11 13:36:44,453 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-11 13:36:49,046 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-11 13:36:51,778 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-11 13:36:55,836 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-11 13:37:02,766 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-11 13:37:06,356 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-11 13:37:12,442 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-11 13:37:18,297 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-11 13:37:20,893 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-11 13:37:26,243 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-11 13:37:28,909 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-11 13:37:36,688 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-11 13:37:40,145 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-11 13:37:45,838 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-11 13:37:54,781 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-11 13:38:03,689 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-11 13:38:09,901 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-11 13:38:15,153 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-11 13:38:21,296 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-11 13:38:29,431 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-11 13:38:33,659 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-11 13:38:41,892 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-11 13:38:45,334 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-11 13:38:48,002 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-11 13:38:51,697 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-11 13:38:55,841 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-11 13:39:01,388 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-11 13:39:07,336 - INFO -    [CHICHENITZA] OK Traducidos: 350/443
+2025-06-11 13:39:11,118 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-11 13:39:15,977 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-11 13:39:21,804 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-11 13:39:27,162 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-11 13:39:30,516 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-11 13:39:40,407 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-11 13:39:46,416 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-11 13:39:51,926 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-11 13:39:58,168 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-11 13:39:58,867 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-11 13:39:58,867 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-11 13:40:04,237 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-11 13:40:09,425 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-11 13:40:18,284 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-11 13:40:25,336 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-11 13:40:30,386 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-11 13:40:34,127 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-11 13:40:40,786 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-11 13:40:46,899 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-11 13:40:50,408 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-11 13:40:59,187 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-11 13:41:06,037 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-11 13:41:10,968 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-11 13:41:17,327 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-11 13:41:21,898 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-11 13:41:32,232 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-11 13:41:36,578 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-11 13:41:41,722 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-11 13:41:47,830 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-11 13:41:52,089 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-11 13:41:56,868 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-11 13:42:01,031 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-11 13:42:03,608 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-11 13:42:06,392 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-11 13:42:09,705 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-11 13:42:12,028 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-11 13:42:14,549 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-11 13:42:16,970 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-11 13:42:19,419 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-11 13:42:22,278 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-11 13:42:25,935 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-11 13:42:29,540 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-11 13:42:32,141 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-11 13:42:35,102 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-11 13:42:38,382 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-11 13:42:43,166 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-11 13:42:46,521 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-11 13:42:50,497 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-11 13:42:52,904 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-11 13:42:57,043 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-11 13:43:00,093 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-11 13:43:02,572 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-11 13:43:05,068 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-11 13:43:07,695 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-11 13:43:08,435 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-11 13:43:08,435 - INFO - PASO2 [CHICHENITZA] PASO 2: Procesando textos traducidos...
+2025-06-11 13:43:09,617 - INFO - PASO3 [CHICHENITZA] PASO 3: Creando dataset final...
+2025-06-11 13:43:09,617 - ERROR - ERROR [CHICHENITZA] Error procesando ciudad: All arrays must be of the same length
+2025-06-11 13:43:09,618 - ERROR - ERROR CHICHENITZA fallo en el procesamiento
+2025-06-11 13:43:09,618 - INFO - 
+PROCESANDO Procesando ciudad 2/2: UXMAL
+2025-06-11 13:43:09,618 - INFO - 
+================================================================================
+2025-06-11 13:43:09,618 - INFO - PROCESANDO CIUDAD: UXMAL
+2025-06-11 13:43:09,618 - INFO - ================================================================================
+2025-06-11 13:43:09,619 - INFO - ARCHIVOS [UXMAL] Cargando archivos...
+2025-06-11 13:43:09,647 - INFO - DATOS [UXMAL] Procesando 75 registros (de 133 desc, 75 img)
+2025-06-11 13:43:09,647 - INFO - PASO1 [UXMAL] PASO 1: Traduciendo textos...
+2025-06-11 13:43:09,648 - INFO - TRADUCCION [UXMAL] Iniciando traduccion de 75 textos (en -> es)...
+2025-06-11 13:43:12,009 - INFO -    [UXMAL] OK Traducidos: 10/75
+2025-06-11 13:43:15,593 - INFO -    [UXMAL] OK Traducidos: 20/75
+2025-06-11 13:43:17,901 - INFO -    [UXMAL] OK Traducidos: 30/75
+2025-06-11 13:43:21,478 - INFO -    [UXMAL] OK Traducidos: 40/75
+2025-06-11 13:43:25,873 - INFO -    [UXMAL] OK Traducidos: 50/75
+2025-06-11 13:43:29,168 - INFO -    [UXMAL] OK Traducidos: 60/75
+2025-06-11 13:43:33,263 - INFO -    [UXMAL] OK Traducidos: 70/75
+2025-06-11 13:43:34,776 - INFO - COMPLETADO [UXMAL] Traduccion completada: 75 textos procesados
+2025-06-11 13:43:34,776 - INFO - TRADUCCION [UXMAL] Iniciando traduccion de 75 textos (en -> es)...
+2025-06-11 13:43:40,154 - INFO -    [UXMAL] OK Traducidos: 10/75
+2025-06-11 13:43:44,678 - INFO -    [UXMAL] OK Traducidos: 20/75
+2025-06-11 13:43:49,176 - INFO -    [UXMAL] OK Traducidos: 30/75
+2025-06-11 13:43:53,428 - INFO -    [UXMAL] OK Traducidos: 40/75
+2025-06-11 13:43:58,122 - INFO -    [UXMAL] OK Traducidos: 50/75
+2025-06-11 13:44:02,344 - INFO -    [UXMAL] OK Traducidos: 60/75
+2025-06-11 13:44:05,979 - INFO -    [UXMAL] OK Traducidos: 70/75
+2025-06-11 13:44:08,230 - INFO - COMPLETADO [UXMAL] Traduccion completada: 75 textos procesados
+2025-06-11 13:44:08,230 - INFO - PASO2 [UXMAL] PASO 2: Procesando textos traducidos...
+2025-06-11 13:44:08,353 - INFO - PASO3 [UXMAL] PASO 3: Creando dataset final...
+2025-06-11 13:44:08,353 - ERROR - ERROR [UXMAL] Error procesando ciudad: All arrays must be of the same length
+2025-06-11 13:44:08,354 - ERROR - ERROR UXMAL fallo en el procesamiento
+2025-06-11 13:44:08,354 - INFO - 
+================================================================================
+2025-06-11 13:44:08,354 - INFO - RESUMEN FINAL DEL PROCESAMIENTO
+2025-06-11 13:44:08,354 - INFO - ================================================================================
+2025-06-11 13:44:08,354 - INFO - TOTAL Total de ciudades: 2
+2025-06-11 13:44:08,355 - INFO - EXITOSAS Exitosas: 0
+2025-06-11 13:44:08,355 - INFO - FALLIDAS Fallidas: 2
+2025-06-11 13:44:08,355 - WARNING - ADVERTENCIA Ciudades que fallaron: ['CHICHENITZA', 'UXMAL']
+2025-06-11 13:44:08,355 - INFO - FINALIZADO Procesamiento completado!
+2025-06-11 13:49:40,446 - INFO - OK NLTK configurado correctamente
+2025-06-11 13:49:40,446 - INFO - 
+INICIO PROCESAMIENTO AUTOMATIZADO
+2025-06-11 13:49:40,447 - INFO - FECHA Y HORA: 2025-06-11 13:49:40
+2025-06-11 13:49:40,447 - INFO - CIUDADES Ciudades encontradas:
+2025-06-11 13:49:40,448 - INFO -    ‚Ä¢ Con descripciones: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 13:49:40,448 - INFO -    ‚Ä¢ Con imagenes: 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 13:49:40,448 - INFO -    ‚Ä¢ Completas (ambos archivos): 5 - ['CHETUMAL', 'CHICHENITZA', 'COZUMEL', 'ISLAMUJERES', 'UXMAL']
+2025-06-11 13:49:40,448 - INFO - FILTRO Procesando solo ciudades especificas: ['CHICHENITZA', 'UXMAL']
+2025-06-11 13:49:40,448 - INFO - 
+PROCESANDO Procesando ciudad 1/2: CHICHENITZA
+2025-06-11 13:49:40,448 - INFO - 
+================================================================================
+2025-06-11 13:49:40,448 - INFO - PROCESANDO CIUDAD: CHICHENITZA
+2025-06-11 13:49:40,448 - INFO - ================================================================================
+2025-06-11 13:49:40,449 - INFO - ARCHIVOS [CHICHENITZA] Cargando archivos...
+2025-06-11 13:49:40,474 - INFO - DATOS [CHICHENITZA] Procesando 443 registros (de 443 desc, 671 img)
+2025-06-11 13:49:40,475 - INFO - PASO1 [CHICHENITZA] PASO 1: Traduciendo textos...
+2025-06-11 13:49:40,475 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-11 13:49:44,689 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-11 13:49:52,767 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-11 13:49:57,611 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-11 13:50:02,583 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-11 13:50:07,823 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-11 13:50:12,767 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-11 13:50:19,199 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-11 13:50:23,250 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-11 13:50:27,531 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-11 13:50:30,358 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-11 13:50:35,160 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-11 13:50:40,617 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-11 13:50:43,557 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-11 13:50:47,615 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-11 13:50:53,306 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-11 13:50:55,577 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-11 13:50:59,663 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-11 13:51:02,053 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-11 13:51:10,652 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-11 13:51:15,583 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-11 13:51:21,631 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-11 13:51:29,405 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-11 13:51:38,823 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-11 13:51:44,725 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-11 13:51:50,844 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-11 13:51:54,841 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-11 13:51:59,500 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-11 13:52:04,043 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-11 13:52:11,764 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-11 13:52:14,869 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-11 13:52:17,378 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-11 13:52:20,876 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-11 13:52:26,407 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-11 13:52:31,245 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-11 13:52:36,755 - INFO -    [CHICHENITZA] OK Traducidos: 350/443
+2025-06-11 13:52:40,192 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-11 13:52:43,788 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-11 13:52:49,213 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-11 13:52:53,799 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-11 13:52:57,453 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-11 13:53:06,297 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-11 13:53:12,135 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-11 13:53:17,930 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-11 13:53:23,602 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-11 13:53:24,999 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-11 13:53:25,000 - INFO - TRADUCCION [CHICHENITZA] Iniciando traduccion de 443 textos (en -> es)...
+2025-06-11 13:53:29,932 - INFO -    [CHICHENITZA] OK Traducidos: 10/443
+2025-06-11 13:53:33,934 - INFO -    [CHICHENITZA] OK Traducidos: 20/443
+2025-06-11 13:53:37,350 - INFO -    [CHICHENITZA] OK Traducidos: 30/443
+2025-06-11 13:53:42,868 - INFO -    [CHICHENITZA] OK Traducidos: 40/443
+2025-06-11 13:53:45,523 - INFO -    [CHICHENITZA] OK Traducidos: 50/443
+2025-06-11 13:53:48,462 - INFO -    [CHICHENITZA] OK Traducidos: 60/443
+2025-06-11 13:53:52,393 - INFO -    [CHICHENITZA] OK Traducidos: 70/443
+2025-06-11 13:53:56,149 - INFO -    [CHICHENITZA] OK Traducidos: 80/443
+2025-06-11 13:54:00,243 - INFO -    [CHICHENITZA] OK Traducidos: 90/443
+2025-06-11 13:54:04,186 - INFO -    [CHICHENITZA] OK Traducidos: 100/443
+2025-06-11 13:54:07,976 - INFO -    [CHICHENITZA] OK Traducidos: 110/443
+2025-06-11 13:54:12,007 - INFO -    [CHICHENITZA] OK Traducidos: 120/443
+2025-06-11 13:54:16,668 - INFO -    [CHICHENITZA] OK Traducidos: 130/443
+2025-06-11 13:54:20,062 - INFO -    [CHICHENITZA] OK Traducidos: 140/443
+2025-06-11 13:54:25,663 - INFO -    [CHICHENITZA] OK Traducidos: 150/443
+2025-06-11 13:54:28,875 - INFO -    [CHICHENITZA] OK Traducidos: 160/443
+2025-06-11 13:54:33,100 - INFO -    [CHICHENITZA] OK Traducidos: 170/443
+2025-06-11 13:54:38,128 - INFO -    [CHICHENITZA] OK Traducidos: 180/443
+2025-06-11 13:54:41,977 - INFO -    [CHICHENITZA] OK Traducidos: 190/443
+2025-06-11 13:54:46,090 - INFO -    [CHICHENITZA] OK Traducidos: 200/443
+2025-06-11 13:54:48,532 - INFO -    [CHICHENITZA] OK Traducidos: 210/443
+2025-06-11 13:54:51,472 - INFO -    [CHICHENITZA] OK Traducidos: 220/443
+2025-06-11 13:54:54,650 - INFO -    [CHICHENITZA] OK Traducidos: 230/443
+2025-06-11 13:54:57,823 - INFO -    [CHICHENITZA] OK Traducidos: 240/443
+2025-06-11 13:55:00,291 - INFO -    [CHICHENITZA] OK Traducidos: 250/443
+2025-06-11 13:55:02,669 - INFO -    [CHICHENITZA] OK Traducidos: 260/443
+2025-06-11 13:55:04,824 - INFO -    [CHICHENITZA] OK Traducidos: 270/443
+2025-06-11 13:55:07,112 - INFO -    [CHICHENITZA] OK Traducidos: 280/443
+2025-06-11 13:55:09,495 - INFO -    [CHICHENITZA] OK Traducidos: 290/443
+2025-06-11 13:55:11,918 - INFO -    [CHICHENITZA] OK Traducidos: 300/443
+2025-06-11 13:55:14,782 - INFO -    [CHICHENITZA] OK Traducidos: 310/443
+2025-06-11 13:55:17,351 - INFO -    [CHICHENITZA] OK Traducidos: 320/443
+2025-06-11 13:55:19,643 - INFO -    [CHICHENITZA] OK Traducidos: 330/443
+2025-06-11 13:55:22,994 - INFO -    [CHICHENITZA] OK Traducidos: 340/443
+2025-06-11 13:55:27,286 - INFO -    [CHICHENITZA] OK Traducidos: 360/443
+2025-06-11 13:55:30,904 - INFO -    [CHICHENITZA] OK Traducidos: 370/443
+2025-06-11 13:55:33,146 - INFO -    [CHICHENITZA] OK Traducidos: 380/443
+2025-06-11 13:55:35,369 - INFO -    [CHICHENITZA] OK Traducidos: 390/443
+2025-06-11 13:55:38,162 - INFO -    [CHICHENITZA] OK Traducidos: 400/443
+2025-06-11 13:55:40,420 - INFO -    [CHICHENITZA] OK Traducidos: 410/443
+2025-06-11 13:55:42,876 - INFO -    [CHICHENITZA] OK Traducidos: 420/443
+2025-06-11 13:55:45,354 - INFO -    [CHICHENITZA] OK Traducidos: 430/443
+2025-06-11 13:55:48,514 - INFO -    [CHICHENITZA] OK Traducidos: 440/443
+2025-06-11 13:55:49,330 - INFO - COMPLETADO [CHICHENITZA] Traduccion completada: 443 textos procesados
+2025-06-11 13:55:49,330 - INFO - VERIFICACION [CHICHENITZA] Longitudes despu√©s de traducir:
+2025-06-11 13:55:49,330 - INFO -    ‚Ä¢ Originales desc: 443
+2025-06-11 13:55:49,331 - INFO -    ‚Ä¢ Originales img: 443
+2025-06-11 13:55:49,331 - INFO -    ‚Ä¢ Traducidos desc: 443
+2025-06-11 13:55:49,331 - INFO -    ‚Ä¢ Traducidos img: 443
+2025-06-11 13:55:49,331 - INFO - PASO2 [CHICHENITZA] PASO 2: Procesando textos traducidos...
+2025-06-11 13:55:50,493 - INFO - VERIFICACION [CHICHENITZA] Longitudes despu√©s de procesar:
+2025-06-11 13:55:50,493 - INFO -    ‚Ä¢ Procesados desc: 443
+2025-06-11 13:55:50,493 - INFO -    ‚Ä¢ Procesados img: 443
+2025-06-11 13:55:50,493 - INFO - PASO3 [CHICHENITZA] PASO 3: Creando dataset final...
+2025-06-11 13:55:50,515 - INFO - EXITO [CHICHENITZA] COMPLETADO:
+2025-06-11 13:55:50,516 - INFO -    ‚Ä¢ Registros procesados: 443
+2025-06-11 13:55:50,516 - INFO -    ‚Ä¢ Textos vacios desc: 0
+2025-06-11 13:55:50,516 - INFO -    ‚Ä¢ Textos vacios img: 10
+2025-06-11 13:55:50,516 - INFO -    ‚Ä¢ Archivo guardado: C:\Users\pumgu\VERANO2025\Corpus_clean\Rivera_MayaCHICHENITZA_clean.csv
+2025-06-11 13:55:50,517 - INFO - EXITO CHICHENITZA procesada exitosamente
+2025-06-11 13:55:50,517 - INFO - 
+PROCESANDO Procesando ciudad 2/2: UXMAL
+2025-06-11 13:55:50,517 - INFO - 
+================================================================================
+2025-06-11 13:55:50,517 - INFO - PROCESANDO CIUDAD: UXMAL
+2025-06-11 13:55:50,517 - INFO - ================================================================================
+2025-06-11 13:55:50,517 - INFO - ARCHIVOS [UXMAL] Cargando archivos...
+2025-06-11 13:55:50,524 - INFO - DATOS [UXMAL] Procesando 75 registros (de 133 desc, 75 img)
+2025-06-11 13:55:50,525 - INFO - PASO1 [UXMAL] PASO 1: Traduciendo textos...
+2025-06-11 13:55:50,525 - INFO - TRADUCCION [UXMAL] Iniciando traduccion de 75 textos (en -> es)...
+2025-06-11 13:55:53,193 - INFO -    [UXMAL] OK Traducidos: 10/75
+2025-06-11 13:55:57,044 - INFO -    [UXMAL] OK Traducidos: 20/75
+2025-06-11 13:55:59,491 - INFO -    [UXMAL] OK Traducidos: 30/75
+2025-06-11 13:56:03,150 - INFO -    [UXMAL] OK Traducidos: 40/75
+2025-06-11 13:56:07,222 - INFO -    [UXMAL] OK Traducidos: 50/75
+2025-06-11 13:56:10,876 - INFO -    [UXMAL] OK Traducidos: 60/75
+2025-06-11 13:56:14,701 - INFO -    [UXMAL] OK Traducidos: 70/75
+2025-06-11 13:56:17,070 - INFO - COMPLETADO [UXMAL] Traduccion completada: 75 textos procesados
+2025-06-11 13:56:17,070 - INFO - TRADUCCION [UXMAL] Iniciando traduccion de 75 textos (en -> es)...
+2025-06-11 13:56:20,029 - INFO -    [UXMAL] OK Traducidos: 10/75
+2025-06-11 13:56:23,108 - INFO -    [UXMAL] OK Traducidos: 20/75
+2025-06-11 13:56:27,874 - INFO -    [UXMAL] OK Traducidos: 30/75
+2025-06-11 13:56:30,690 - INFO -    [UXMAL] OK Traducidos: 40/75
+2025-06-11 13:56:33,955 - INFO -    [UXMAL] OK Traducidos: 50/75
+2025-06-11 13:56:36,536 - INFO -    [UXMAL] OK Traducidos: 60/75
+2025-06-11 13:56:39,286 - INFO -    [UXMAL] OK Traducidos: 70/75
+2025-06-11 13:56:41,420 - INFO - COMPLETADO [UXMAL] Traduccion completada: 75 textos procesados
+2025-06-11 13:56:41,421 - INFO - VERIFICACION [UXMAL] Longitudes despu√©s de traducir:
+2025-06-11 13:56:41,421 - INFO -    ‚Ä¢ Originales desc: 75
+2025-06-11 13:56:41,421 - INFO -    ‚Ä¢ Originales img: 75
+2025-06-11 13:56:41,421 - INFO -    ‚Ä¢ Traducidos desc: 75
+2025-06-11 13:56:41,421 - INFO -    ‚Ä¢ Traducidos img: 75
+2025-06-11 13:56:41,421 - INFO - PASO2 [UXMAL] PASO 2: Procesando textos traducidos...
+2025-06-11 13:56:41,516 - INFO - VERIFICACION [UXMAL] Longitudes despu√©s de procesar:
+2025-06-11 13:56:41,517 - INFO -    ‚Ä¢ Procesados desc: 75
+2025-06-11 13:56:41,517 - INFO -    ‚Ä¢ Procesados img: 75
+2025-06-11 13:56:41,517 - INFO - PASO3 [UXMAL] PASO 3: Creando dataset final...
+2025-06-11 13:56:41,522 - INFO - EXITO [UXMAL] COMPLETADO:
+2025-06-11 13:56:41,522 - INFO -    ‚Ä¢ Registros procesados: 75
+2025-06-11 13:56:41,522 - INFO -    ‚Ä¢ Textos vacios desc: 0
+2025-06-11 13:56:41,522 - INFO -    ‚Ä¢ Textos vacios img: 1
+2025-06-11 13:56:41,522 - INFO -    ‚Ä¢ Archivo guardado: C:\Users\pumgu\VERANO2025\Corpus_clean\Rivera_MayaUXMAL_clean.csv
+2025-06-11 13:56:41,523 - INFO - EXITO UXMAL procesada exitosamente
+2025-06-11 13:56:41,523 - INFO - 
+================================================================================
+2025-06-11 13:56:41,523 - INFO - RESUMEN FINAL DEL PROCESAMIENTO
+2025-06-11 13:56:41,523 - INFO - ================================================================================
+2025-06-11 13:56:41,523 - INFO - TOTAL Total de ciudades: 2
+2025-06-11 13:56:41,523 - INFO - EXITOSAS Exitosas: 2
+2025-06-11 13:56:41,523 - INFO - FALLIDAS Fallidas: 0
+2025-06-11 13:56:41,523 - INFO - FINALIZADO Procesamiento completado!
