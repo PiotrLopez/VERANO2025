@@ -10,6 +10,10 @@ import re
 import os
 from sklearn.feature_extraction.text import CountVectorizer
 import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+import umap
+from sklearn.decomposition import LatentDirichletAllocation
+
 
 class CorpusAnalyzer:
     def __init__(self, root):
@@ -85,6 +89,7 @@ class CorpusAnalyzer:
         ttk.Button(button_frame, text="Limpiar", command=self.clear_plots).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Comparar Columnas", command=self.compare_columns).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Comparar N-gramas", command=self.compare_ngrams).pack(side=tk.LEFT, padx=5)
+        ttk.Button(button_frame, text="TF-IDF + UMAP + LDA", command=self.tfidf_umap_and_lda).pack(side=tk.LEFT, padx=5)
 
         # Panel de visualización
         viz_frame = ttk.LabelFrame(main_frame, text="Visualizaciones", padding="5")
@@ -512,7 +517,71 @@ Total palabras únicas: {len(set(all_words))}
 
         except Exception as e:
             messagebox.showerror("Error", f"No se pudo comparar los n-gramas: {str(e)}")
+    def tfidf_umap_and_lda(self):
+        if self.data is None:
+            messagebox.showwarning("Advertencia", "Debe cargar un archivo CSV.")
+            return
 
+        col1 = self.column_var.get()
+        col2 = self.compare_column_var.get()
+
+        if not col1 or not col2:
+            messagebox.showwarning("Advertencia", "Debe seleccionar ambas columnas.")
+            return
+
+        if col1 == col2:
+            messagebox.showwarning("Advertencia", "Seleccione columnas diferentes.")
+            return
+
+        try:
+            texts1 = self.preprocess_text(self.data[col1].dropna())
+            texts2 = self.preprocess_text(self.data[col2].dropna())
+
+            all_texts = texts1 + texts2
+            labels = [col1] * len(texts1) + [col2] * len(texts2)
+
+            tfidf = TfidfVectorizer()
+            X_tfidf = tfidf.fit_transform(all_texts)
+
+            reducer = umap.UMAP(n_components=2, random_state=42)
+            embedding = reducer.fit_transform(X_tfidf.toarray())
+
+            fig, ax = plt.subplots(figsize=(10, 6))
+            for label in set(labels):
+                idx = [i for i, l in enumerate(labels) if l == label]
+                ax.scatter(embedding[idx, 0], embedding[idx, 1], label=label, alpha=0.6)
+            ax.set_title("UMAP de TF-IDF - Comparación de Columnas")
+            ax.legend()
+            self.add_plot_to_notebook(fig, f"UMAP TF-IDF: {col1} vs {col2}")
+
+            # LDA para cada columna
+            def plot_lda_topics(texts, col_name):
+                vec = CountVectorizer(stop_words='english', max_features=5000)
+                dtm = vec.fit_transform(texts)
+                lda = LatentDirichletAllocation(n_components=10, random_state=42)
+                lda.fit(dtm)
+                words = vec.get_feature_names_out()
+
+                fig, axs = plt.subplots(2, 5, figsize=(18, 6))
+                axs = axs.flatten()
+
+                for i, topic in enumerate(lda.components_):
+                    top_words_idx = topic.argsort()[-10:][::-1]
+                    top_words = [words[i] for i in top_words_idx]
+                    weights = topic[top_words_idx]
+                    axs[i].barh(top_words, weights, color='purple')
+                    axs[i].invert_yaxis()
+                    axs[i].set_title(f'Tema {i+1}')
+
+                fig.suptitle(f'LDA - Top 10 palabras por tema - {col_name}', fontsize=14, fontweight='bold')
+                plt.tight_layout()
+                self.add_plot_to_notebook(fig, f"LDA - {col_name}")
+
+            plot_lda_topics(texts1, col1)
+            plot_lda_topics(texts2, col2)
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error en TF-IDF/UMAP/LDA: {str(e)}")
 
 def main():
     root = tk.Tk()

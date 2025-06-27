@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_1", "keywords": "adivino, casa, enano, gobernador, lugar, mexico, monjas, palacio, piedra, visit", "label": "Post Cluster 1", "sentimiento": "NEU", "shape": "circle", "size": 52, "title": "\u003cb\u003ePost Cluster 1\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 52\u003cbr\u003ePalabras clave: adivino, casa, enano, gobernador, lugar, mexico, monjas, palacio, piedra, visit\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_8", "keywords": "imperio", "label": "Post Cluster 8", "sentimiento": "NEU", "shape": "circle", "size": 1, "title": "\u003cb\u003ePost Cluster 8\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: imperio\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_4", "keywords": "1940, apoximadamete, cuadrangulo, monjas", "label": "Post Cluster 4", "sentimiento": "NEU", "shape": "circle", "size": 1, "title": "\u003cb\u003ePost Cluster 4\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: 1940, apoximadamete, cuadrangulo, monjas\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_6", "keywords": "hemisferio, norte, osa", "label": "Post Cluster 6", "sentimiento": "NEU", "shape": "circle", "size": 1, "title": "\u003cb\u003ePost Cluster 6\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: hemisferio, norte, osa\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_0", "keywords": "1952, adivino, descanso, earl, editada, getty, hamaca, instituto, leaf, pastel", "label": "Post Cluster 0", "sentimiento": "NEU", "shape": "circle", "size": 1, "title": "\u003cb\u003ePost Cluster 0\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: 1952, adivino, descanso, earl, editada, getty, hamaca, instituto, leaf, pastel\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_5", "keywords": "bellos, momentos", "label": "Post Cluster 5", "sentimiento": "NEU", "shape": "circle", "size": 1, "title": "\u003cb\u003ePost Cluster 5\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: bellos, momentos\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_7", "keywords": "1939, 1946, 1950", "label": "Post Cluster 7", "sentimiento": "NEU", "shape": "circle", "size": 3, "title": "\u003cb\u003ePost Cluster 7\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 3\u003cbr\u003ePalabras clave: 1939, 1946, 1950\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_9", "keywords": "asesoria, ayuda, ayudarte, brindamos, dm, elena, enviicos, explorando, grupo, viaje", "label": "Post Cluster 9", "sentimiento": "NEU", "shape": "circle", "size": 3, "title": "\u003cb\u003ePost Cluster 9\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 3\u003cbr\u003ePalabras clave: asesoria, ayuda, ayudarte, brindamos, dm, elena, enviicos, explorando, grupo, viaje\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_3", "keywords": "2020, grid, travel", "label": "Post Cluster 3", "sentimiento": "NEU", "shape": "circle", "size": 3, "title": "\u003cb\u003ePost Cluster 3\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 3\u003cbr\u003ePalabras clave: 2020, grid, travel\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_2", "keywords": "completa, entra, feed", "label": "Post Cluster 2", "sentimiento": "NEU", "shape": "circle", "size": 6, "title": "\u003cb\u003ePost Cluster 2\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 6\u003cbr\u003ePalabras clave: completa, entra, feed\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_9", "keywords": "arqueologicamente, arqueologico, brutalista, cascadas, descubrimiento, escombros, piramides, puerta, temperaturas, terrazas", "label": "Desc Cluster 9", "sentimiento": "NEU", "shape": "circle", "size": 7, "title": "\u003cb\u003eDesc Cluster 9\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 7\u003cbr\u003ePalabras clave: arqueologicamente, arqueologico, brutalista, cascadas, descubrimiento, escombros, piramides, puerta, temperaturas, terrazas\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_4", "keywords": "ancient, architecture, aztec, giant, matte, mayan, painting, pyramid, road, ruins", "label": "Desc Cluster 4", "sentimiento": "NEU", "shape": "circle", "size": 13, "title": "\u003cb\u003eDesc Cluster 4\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 13\u003cbr\u003ePalabras clave: ancient, architecture, aztec, giant, matte, mayan, painting, pyramid, road, ruins\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_1", "keywords": "1960, 1970, camara, captura, circa, kodak, pantalla, pelicula, periodico, revista", "label": "Desc Cluster 1", "sentimiento": "NEU", "shape": "circle", "size": 12, "title": "\u003cb\u003eDesc Cluster 1\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 12\u003cbr\u003ePalabras clave: 1960, 1970, camara, captura, circa, kodak, pantalla, pelicula, periodico, revista\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_3", "keywords": "1930, arqueologica, castillo, catalogo, destruidas, guerra, proyeccion, real, realista, reina", "label": "Desc Cluster 3", "sentimiento": "NEU", "shape": "circle", "size": 10, "title": "\u003cb\u003eDesc Cluster 3\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 10\u003cbr\u003ePalabras clave: 1930, arqueologica, castillo, catalogo, destruidas, guerra, proyeccion, real, realista, reina\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_2", "keywords": "arte, coloridas, imagen, luz, paredes, pintura, proyeccion, proyecciones, vegetacion, volando", "label": "Desc Cluster 2", "sentimiento": "NEU", "shape": "circle", "size": 27, "title": "\u003cb\u003eDesc Cluster 2\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 27\u003cbr\u003ePalabras clave: arte, coloridas, imagen, luz, paredes, pintura, proyeccion, proyecciones, vegetacion, volando\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_6", "keywords": "avion, azul, azules, cielo, cielos, hd, limpio, puro, solido, tonos", "label": "Desc Cluster 6", "sentimiento": "POS", "shape": "triangle", "size": 1, "title": "\u003cb\u003eDesc Cluster 6\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: avion, azul, azules, cielo, cielos, hd, limpio, puro, solido, tonos\u003cbr\u003eSentimiento: POS\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_5", "keywords": "abandonadas, amplio, angular, angulo, cascadas, centrada, mirando, paisajes, panorama, vista", "label": "Desc Cluster 5", "sentimiento": "NEU", "shape": "circle", "size": 2, "title": "\u003cb\u003eDesc Cluster 5\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 2\u003cbr\u003ePalabras clave: abandonadas, amplio, angular, angulo, cascadas, centrada, mirando, paisajes, panorama, vista\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_0", "keywords": "1981, 1987, 1990, 1999, arco, arcos, construyo, danado, masivo, paredes", "label": "Desc Cluster 0", "sentimiento": "NEU", "shape": "circle", "size": 1, "title": "\u003cb\u003eDesc Cluster 0\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: 1981, 1987, 1990, 1999, arco, arcos, construyo, danado, masivo, paredes\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_7", "keywords": "blanca, chila, sol", "label": "Desc Cluster 7", "sentimiento": "POS", "shape": "triangle", "size": 1, "title": "\u003cb\u003eDesc Cluster 7\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: blanca, chila, sol\u003cbr\u003eSentimiento: POS\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_8", "keywords": "blanca, desierto, piramida, temperamento", "label": "Desc Cluster 8", "sentimiento": "NEU", "shape": "circle", "size": 1, "title": "\u003cb\u003eDesc Cluster 8\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: blanca, desierto, piramida, temperamento\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}]);
+                  edges = new vis.DataSet([]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -80000,
+            "springConstant": 0.001,
+            "springLength": 250
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

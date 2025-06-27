@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_4", "keywords": "ay, be, bi, ciudad, ful, je, jungla, li, ph, visite", "label": "Post Cluster 4", "sentimiento": "NEU", "shape": "circle", "size": 13, "title": "\u003cb\u003ePost Cluster 4\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 13\u003cbr\u003ePalabras clave: ay, be, bi, ciudad, ful, je, jungla, li, ph, visite\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_6", "keywords": "365, in, kukulkaater, lk, maravilla, piraater, pyramid, templo, visit, wonders", "label": "Post Cluster 6", "sentimiento": "NEU", "shape": "circle", "size": 87, "title": "\u003cb\u003ePost Cluster 6\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 87\u003cbr\u003ePalabras clave: 365, in, kukulkaater, lk, maravilla, piraater, pyramid, templo, visit, wonders\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_2", "keywords": "ay, equinoccio, friday, li, noche, saturday, sol, thursday, vibes, vida", "label": "Post Cluster 2", "sentimiento": "NEU", "shape": "circle", "size": 46, "title": "\u003cb\u003ePost Cluster 2\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 46\u003cbr\u003ePalabras clave: ay, equinoccio, friday, li, noche, saturday, sol, thursday, vibes, vida\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_8", "keywords": "antigua, chiche, cultura, cultural, history, lk, lugar, maravilla, ruinas, templo", "label": "Post Cluster 8", "sentimiento": "NEU", "shape": "circle", "size": 132, "title": "\u003cb\u003ePost Cluster 8\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 132\u003cbr\u003ePalabras clave: antigua, chiche, cultura, cultural, history, lk, lugar, maravilla, ruinas, templo\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_9", "keywords": "aventura, aventuras, bloggers, explorar, je, via, viajar, viaje, vida, visitar", "label": "Post Cluster 9", "sentimiento": "NEU", "shape": "circle", "size": 33, "title": "\u003cb\u003ePost Cluster 9\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 33\u003cbr\u003ePalabras clave: aventura, aventuras, bloggers, explorar, je, via, viajar, viaje, vida, visitar\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_5", "keywords": "ano, bloggers, chiche, comentarios, continuacion, edificio, maravilla, monday, vibes, wednesday", "label": "Post Cluster 5", "sentimiento": "NEU", "shape": "circle", "size": 73, "title": "\u003cb\u003ePost Cluster 5\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 73\u003cbr\u003ePalabras clave: ano, bloggers, chiche, comentarios, continuacion, edificio, maravilla, monday, vibes, wednesday\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_1", "keywords": "cido, compartimos, cono, des, endo, fy, je, mara, via, villas", "label": "Post Cluster 1", "sentimiento": "NEU", "shape": "circle", "size": 5, "title": "\u003cb\u003ePost Cluster 1\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 5\u003cbr\u003ePalabras clave: cido, compartimos, cono, des, endo, fy, je, mara, via, villas\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_0", "keywords": "amor, bloggers, maravilla, monday, mood, nes, tambie", "label": "Post Cluster 0", "sentimiento": "NEU", "shape": "circle", "size": 1, "title": "\u003cb\u003ePost Cluster 0\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 1\u003cbr\u003ePalabras clave: amor, bloggers, maravilla, monday, mood, nes, tambie\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_7", "keywords": "app, friday, fun, maravilla, py, re, st, sunday, to, yu", "label": "Post Cluster 7", "sentimiento": "NEU", "shape": "circle", "size": 21, "title": "\u003cb\u003ePost Cluster 7\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 21\u003cbr\u003ePalabras clave: app, friday, fun, maravilla, py, re, st, sunday, to, yu\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_3", "keywords": "ad, ely, iz, monday, motivation, step, ta, ure, visite, wander", "label": "Post Cluster 3", "sentimiento": "NEU", "shape": "circle", "size": 22, "title": "\u003cb\u003ePost Cluster 3\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 22\u003cbr\u003ePalabras clave: ad, ely, iz, monday, motivation, step, ta, ure, visite, wander\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_6", "keywords": "alienigena, alivio, antiguo, cabeza, dios, escultura, estatuas, foto, hombre, playa", "label": "Desc Cluster 6", "sentimiento": "NEU", "shape": "circle", "size": 57, "title": "\u003cb\u003eDesc Cluster 6\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 57\u003cbr\u003ePalabras clave: alienigena, alivio, antiguo, cabeza, dios, escultura, estatuas, foto, hombre, playa\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_1", "keywords": "catedral, elders, fantasy, gister, monolithic, monumento, piramidal, pyramids, sundown, ziggurat", "label": "Desc Cluster 1", "sentimiento": "NEU", "shape": "circle", "size": 27, "title": "\u003cb\u003eDesc Cluster 1\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 27\u003cbr\u003ePalabras clave: catedral, elders, fantasy, gister, monolithic, monumento, piramidal, pyramids, sundown, ziggurat\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_7", "keywords": "antiguo, blanco, dios, diosa, hermosas, pie, sacerdotisa, sundown, vestido, viajes", "label": "Desc Cluster 7", "sentimiento": "NEU", "shape": "circle", "size": 51, "title": "\u003cb\u003eDesc Cluster 7\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 51\u003cbr\u003ePalabras clave: antiguo, blanco, dios, diosa, hermosas, pie, sacerdotisa, sundown, vestido, viajes\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_2", "keywords": "city, civilizacion, civilizations, classic, elders, large, megalithic, pyramids, space, sundown", "label": "Desc Cluster 2", "sentimiento": "NEU", "shape": "circle", "size": 38, "title": "\u003cb\u003eDesc Cluster 2\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 38\u003cbr\u003ePalabras clave: city, civilizacion, civilizations, classic, elders, large, megalithic, pyramids, space, sundown\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_5", "keywords": "antecedentes, foto, luna, pelicula, piramida, piramidal, pyramida, realista, temperatura, tenochtitlan", "label": "Desc Cluster 5", "sentimiento": "NEU", "shape": "circle", "size": 83, "title": "\u003cb\u003eDesc Cluster 5\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 83\u003cbr\u003ePalabras clave: antecedentes, foto, luna, pelicula, piramida, piramidal, pyramida, realista, temperatura, tenochtitlan\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_3", "keywords": "atardecer, brutalista, cielo, civilizacion, clasica, clasico, monumentales, piramida, piramidal, piramidales", "label": "Desc Cluster 3", "sentimiento": "NEU", "shape": "circle", "size": 65, "title": "\u003cb\u003eDesc Cluster 3\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 65\u003cbr\u003ePalabras clave: atardecer, brutalista, cielo, civilizacion, clasica, clasico, monumentales, piramida, piramidal, piramidales\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_8", "keywords": "antecedentes, antiguos, blanca, campo, entorno, flores, hermosas, hierba, jovenes, plantas", "label": "Desc Cluster 8", "sentimiento": "NEU", "shape": "circle", "size": 33, "title": "\u003cb\u003eDesc Cluster 8\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 33\u003cbr\u003ePalabras clave: antecedentes, antiguos, blanca, campo, entorno, flores, hermosas, hierba, jovenes, plantas\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_4", "keywords": "caidas, columnas, griegas, hermosas, paredes, peces, personas, pilares, torre, tumba", "label": "Desc Cluster 4", "sentimiento": "NEU", "shape": "circle", "size": 34, "title": "\u003cb\u003eDesc Cluster 4\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 34\u003cbr\u003ePalabras clave: caidas, columnas, griegas, hermosas, paredes, peces, personas, pilares, torre, tumba\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_9", "keywords": "beautiful, behind, city, elders, front, large, pyramids, standing, stone, trampling", "label": "Desc Cluster 9", "sentimiento": "NEU", "shape": "circle", "size": 43, "title": "\u003cb\u003eDesc Cluster 9\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 43\u003cbr\u003ePalabras clave: beautiful, behind, city, elders, front, large, pyramids, standing, stone, trampling\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_0", "keywords": "agua, aguas, azul, cascada, cueva, lago, piscina, subterraneo, sumidero, verde", "label": "Desc Cluster 0", "sentimiento": "NEU", "shape": "circle", "size": 10, "title": "\u003cb\u003eDesc Cluster 0\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 10\u003cbr\u003ePalabras clave: agua, aguas, azul, cascada, cueva, lago, piscina, subterraneo, sumidero, verde\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}]);
+                  edges = new vis.DataSet([]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -80000,
+            "springConstant": 0.001,
+            "springLength": 250
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

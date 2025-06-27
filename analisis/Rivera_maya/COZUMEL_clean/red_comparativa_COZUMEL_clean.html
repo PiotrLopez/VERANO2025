@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_0", "keywords": "adventure, cristalinas, deja, diversion, espera, magia, playas, sumergete, tropical, vive", "label": "Post Cluster 0", "sentimiento": "NEU", "shape": "circle", "size": 45, "title": "\u003cb\u003ePost Cluster 0\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 45\u003cbr\u003ePalabras clave: adventure, cristalinas, deja, diversion, espera, magia, playas, sumergete, tropical, vive\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_9", "keywords": "admire, criaturas, historia, lugar, natural, preserve, punta, sur, visita, visitar", "label": "Post Cluster 9", "sentimiento": "NEU", "shape": "circle", "size": 67, "title": "\u003cb\u003ePost Cluster 9\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 67\u003cbr\u003ePalabras clave: admire, criaturas, historia, lugar, natural, preserve, punta, sur, visita, visitar\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_5", "keywords": "arena, belleza, brisa, cielo, disfrutar, lugar, natural, playa, playas, sol", "label": "Post Cluster 5", "sentimiento": "NEU", "shape": "circle", "size": 85, "title": "\u003cb\u003ePost Cluster 5\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 85\u003cbr\u003ePalabras clave: arena, belleza, brisa, cielo, disfrutar, lugar, natural, playa, playas, sol\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_7", "keywords": "amor, disfrutar, familia, ideal, juntos, maximo, momentos, persona, tiempo, viaje", "label": "Post Cluster 7", "sentimiento": "NEU", "shape": "circle", "size": 32, "title": "\u003cb\u003ePost Cluster 7\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 32\u003cbr\u003ePalabras clave: amor, disfrutar, familia, ideal, juntos, maximo, momentos, persona, tiempo, viaje\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_6", "keywords": "an, carnaval, celebracion, colores, cultura, lugares, maya, reina, san, ven", "label": "Post Cluster 6", "sentimiento": "NEU", "shape": "circle", "size": 25, "title": "\u003cb\u003ePost Cluster 6\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 25\u003cbr\u003ePalabras clave: an, carnaval, celebracion, colores, cultura, lugares, maya, reina, san, ven\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_3", "keywords": "comida, disfruta, disfrutar, favorito, food, ie, perfecto, sabor, sabores, tacos", "label": "Post Cluster 3", "sentimiento": "NEU", "shape": "circle", "size": 30, "title": "\u003cb\u003ePost Cluster 3\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 30\u003cbr\u003ePalabras clave: comida, disfruta, disfrutar, favorito, food, ie, perfecto, sabor, sabores, tacos\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_8", "keywords": "agua, bu, criaturas, cristalinas, experiencia, marina, mundo, profundidades, puedes, sumergete", "label": "Post Cluster 8", "sentimiento": "NEU", "shape": "circle", "size": 58, "title": "\u003cb\u003ePost Cluster 8\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 58\u003cbr\u003ePalabras clave: agua, bu, criaturas, cristalinas, experiencia, marina, mundo, profundidades, puedes, sumergete\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_2", "keywords": "belleza, color, foto, momento, puedes, tomar, turquesa, ven, vista, yoga", "label": "Post Cluster 2", "sentimiento": "NEU", "shape": "circle", "size": 39, "title": "\u003cb\u003ePost Cluster 2\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 39\u003cbr\u003ePalabras clave: belleza, color, foto, momento, puedes, tomar, turquesa, ven, vista, yoga\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_1", "keywords": "art, arte, belleza, calles, cultura, explora, lleno, maya, natural, uct", "label": "Post Cluster 1", "sentimiento": "NEU", "shape": "circle", "size": 27, "title": "\u003cb\u003ePost Cluster 1\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 27\u003cbr\u003ePalabras clave: art, arte, belleza, calles, cultura, explora, lleno, maya, natural, uct\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#1f78b4", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "post", "id": "post_4", "keywords": "2024, amor, ano, bienvenida, celebrar, damos, day, deja, romance, sol", "label": "Post Cluster 4", "sentimiento": "NEU", "shape": "circle", "size": 10, "title": "\u003cb\u003ePost Cluster 4\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 10\u003cbr\u003ePalabras clave: 2024, amor, ano, bienvenida, celebrar, damos, day, deja, romance, sol\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_9", "keywords": "antiguas, ciudad, colores, maya, mayas, mexico, piedra, ruinas, templo, templos", "label": "Desc Cluster 9", "sentimiento": "NEU", "shape": "circle", "size": 55, "title": "\u003cb\u003eDesc Cluster 9\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 55\u003cbr\u003ePalabras clave: antiguas, ciudad, colores, maya, mayas, mexico, piedra, ruinas, templo, templos\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_6", "keywords": "barco, bote, canoa, cielo, cubierta, flotando, isla, submarina, vela, yate", "label": "Desc Cluster 6", "sentimiento": "NEU", "shape": "circle", "size": 34, "title": "\u003cb\u003eDesc Cluster 6\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 34\u003cbr\u003ePalabras clave: barco, bote, canoa, cielo, cubierta, flotando, isla, submarina, vela, yate\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_7", "keywords": "arena, atardecer, azules, caribena, estrellas, mirando, nina, puesta, sol, turquesa", "label": "Desc Cluster 7", "sentimiento": "NEU", "shape": "circle", "size": 62, "title": "\u003cb\u003eDesc Cluster 7\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 62\u003cbr\u003ePalabras clave: arena, atardecer, azules, caribena, estrellas, mirando, nina, puesta, sol, turquesa\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_5", "keywords": "art, background, color, colorful, drones, mural, sombrero, underwater, verde, water", "label": "Desc Cluster 5", "sentimiento": "NEU", "shape": "circle", "size": 67, "title": "\u003cb\u003eDesc Cluster 5\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 67\u003cbr\u003ePalabras clave: art, background, color, colorful, drones, mural, sombrero, underwater, verde, water\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_3", "keywords": "arena, beach, caribena, coco, isla, jungla, magica, palma, palmeras, vegetacion", "label": "Desc Cluster 3", "sentimiento": "NEU", "shape": "circle", "size": 44, "title": "\u003cb\u003eDesc Cluster 3\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 44\u003cbr\u003ePalabras clave: arena, beach, caribena, coco, isla, jungla, magica, palma, palmeras, vegetacion\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_2", "keywords": "alas, angel, carrera, cielo, completo, cuerpo, maraton, pose, rosa, volando", "label": "Desc Cluster 2", "sentimiento": "NEU", "shape": "circle", "size": 54, "title": "\u003cb\u003eDesc Cluster 2\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 54\u003cbr\u003ePalabras clave: alas, angel, carrera, cielo, completo, cuerpo, maraton, pose, rosa, volando\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_0", "keywords": "bienestar, borde, pareja, pies, piscina, pose, relaja, relajacion, relajandose, relajarse", "label": "Desc Cluster 0", "sentimiento": "NEU", "shape": "circle", "size": 17, "title": "\u003cb\u003eDesc Cluster 0\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 17\u003cbr\u003ePalabras clave: bienestar, borde, pareja, pies, piscina, pose, relaja, relajacion, relajandose, relajarse\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_8", "keywords": "arrecifes, coral, corales, marinas, peces, pescado, submarina, submarino, tortuga, tropicales", "label": "Desc Cluster 8", "sentimiento": "NEU", "shape": "circle", "size": 27, "title": "\u003cb\u003eDesc Cluster 8\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 27\u003cbr\u003ePalabras clave: arrecifes, coral, corales, marinas, peces, pescado, submarina, submarino, tortuga, tropicales\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_1", "keywords": "alimentos, bebidas, cafe, cocteles, comida, enfoque, madera, mesa, plato, tacos", "label": "Desc Cluster 1", "sentimiento": "NEU", "shape": "circle", "size": 32, "title": "\u003cb\u003eDesc Cluster 1\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 32\u003cbr\u003ePalabras clave: alimentos, bebidas, cafe, cocteles, comida, enfoque, madera, mesa, plato, tacos\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}, {"color": "#33a02c", "font": {"color": "white"}, "frame": "NEUTRAL", "fuente": "descripcion", "id": "desc_4", "keywords": "buceo, buzo, cueva, estrella, flotando, gopro, nadando, profundo, submarina, submarino", "label": "Desc Cluster 4", "sentimiento": "NEU", "shape": "circle", "size": 26, "title": "\u003cb\u003eDesc Cluster 4\u003c/b\u003e\u003cbr\u003eTama\u00f1o: 26\u003cbr\u003ePalabras clave: buceo, buzo, cueva, estrella, flotando, gopro, nadando, profundo, submarina, submarino\u003cbr\u003eSentimiento: NEU\u003cbr\u003eMarco: NEUTRAL"}]);
+                  edges = new vis.DataSet([]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -80000,
+            "springConstant": 0.001,
+            "springLength": 250
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
